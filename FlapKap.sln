@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlapKap-TechnicalChallenge"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{93480B8E-36DE-4539-A747-5A0F6DEA7F56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BAL\BLL.csproj", "{5301FBD4-C7B6-485C-B4E8-BE32EA72EBA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{5F8CFFAB-F4CE-4B4B-B095-A281B7942CBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{93480B8E-36DE-4539-A747-5A0F6DEA7F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93480B8E-36DE-4539-A747-5A0F6DEA7F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93480B8E-36DE-4539-A747-5A0F6DEA7F56}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5301FBD4-C7B6-485C-B4E8-BE32EA72EBA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5301FBD4-C7B6-485C-B4E8-BE32EA72EBA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5301FBD4-C7B6-485C-B4E8-BE32EA72EBA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5301FBD4-C7B6-485C-B4E8-BE32EA72EBA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F8CFFAB-F4CE-4B4B-B095-A281B7942CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F8CFFAB-F4CE-4B4B-B095-A281B7942CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F8CFFAB-F4CE-4B4B-B095-A281B7942CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F8CFFAB-F4CE-4B4B-B095-A281B7942CBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

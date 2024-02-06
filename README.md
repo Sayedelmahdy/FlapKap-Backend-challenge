@@ -22,17 +22,30 @@ This project implements a vending machine API allowing users with different role
 
   
 # Getting Started
+
 To run the project locally, follow these steps:
-1. Clone the repository:
-   git clone https://github.com/Sayedelmahdy/FlapKap-Backend-challenge.git
-   cd FlapKap
-2. Open FlapKap.sln on visual Studio
-3. Configure the database:
-  - First: you need to setup MSSQL in your machine 
-  - Second: Go to Tools -> Nuget Package Manager -> Package Manager Console 
-  - Third: Opening the Package Manager Console and write "Update-Database"
-4.Run the application by pressing Ctrl+f5
-5.Access the API from Swagger page at ':https://localhost:7029/swagger/index.html'
+
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/Sayedelmahdy/FlapKap-Backend-challenge.git
+    cd FlapKap
+    ```
+
+2. **Open FlapKap.sln on Visual Studio**
+
+3. **Configure the Database:**
+   - First, ensure you have MSSQL set up on your machine.
+   - Second, go to Tools -> NuGet Package Manager -> Package Manager Console.
+   - Third, open the Package Manager Console and run the command:
+     ```bash
+     Update-Database
+     ```
+
+4. **Run the Application:**
+   - Press `Ctrl + F5` to build and run the application.
+
+5. **Access the API:**
+   - Open your browser and navigate to [https://localhost:7029/swagger/index.html](https://localhost:7029/swagger/index.html) to access the API from the Swagger page.
 
 # API Endpoints
 

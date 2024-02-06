@@ -89,6 +89,12 @@ To run the project locally, follow these steps:
 - **Description**: Retrieves details of a specific product.
 - **Authentication**: Not required
 
+### Get My Products
+
+- **Endpoint**: `PUT /api/Product/GetMyProducts`
+- **Description**: Retrieves a list of all products for a specific user .
+- **Authentication**: Required (Seller role)
+
 ### Add Product
 
 - **Endpoint**: `POST /api/Product/AddProduct`
@@ -109,10 +115,10 @@ To run the project locally, follow these steps:
 
 ## User
 
-### Get All Users
+### Get User Detail
 
 - **Endpoint**: `GET /api/User`
-- **Description**: Retrieves a list of all users.
+- **Description**: Retrieve a user Details.
 - **Authentication**: Required (Seller role)
 
 ### Update User

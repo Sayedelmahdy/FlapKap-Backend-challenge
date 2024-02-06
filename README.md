@@ -91,7 +91,7 @@ To run the project locally, follow these steps:
 
 ### Get My Products
 
-- **Endpoint**: `PUT /api/Product/GetMyProducts`
+- **Endpoint**: `GET /api/Product/GetMyProducts`
 - **Description**: Retrieves a list of all products for a specific user .
 - **Authentication**: Required (Seller role)
 

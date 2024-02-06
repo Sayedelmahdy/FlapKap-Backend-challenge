@@ -37,6 +37,7 @@ namespace FlapKap_TechnicalChallenge.Controllers
           return Ok(products);
 
         }
+        
         [HttpGet("GetProduct/{id}")]
         public async Task< IActionResult> GetProduct( string id)
         {
@@ -50,6 +51,19 @@ namespace FlapKap_TechnicalChallenge.Controllers
                 return NotFound("Product not found");
             }
             return Ok(product);
+        }
+        [Authorize(Roles = "Seller")]
+        [HttpGet("GetMyProducts")]
+        public async Task<IActionResult> GetMyProducts()
+        {
+            string userName = await GetUserNameFromCookies();
+            var products = await _productService.GetMyProducts(userName);
+            if (products.IsNullOrEmpty())
+            {
+                return NoContent();
+
+            }
+            return Ok(products);
         }
         [Authorize(Roles ="Seller")]
         [HttpPost("AddProduct")]

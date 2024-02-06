@@ -14,6 +14,7 @@ namespace BLL.Interfaces
         Task<GetProductDto> UpdateProductAsync(UpdateProductDto productDto,string SellerUserName);
         IEnumerable< GetProductDto>? GetAllProduct();
         Task <GetProductDto> GetProductAsync(string ProductId);
+        Task<IEnumerable<GetProductDto>> GetMyProducts(string username);
 
     }
 }

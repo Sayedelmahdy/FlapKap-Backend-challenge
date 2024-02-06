@@ -89,7 +89,24 @@ namespace BLL.Services
             }
             return products;
         }
-        
+
+        public async Task<IEnumerable<GetProductDto>> GetMyProducts(string username)
+        {
+            var user = await _userManager.FindByNameAsync(username);
+            if (user==null)
+                return Enumerable.Empty< GetProductDto>();
+            var products =  _Product.Where(p => p.SellerId == user.Id).Select(p => new GetProductDto
+            {
+               AmountAvailable = p.AmountAvailable,
+               Cost = p.Cost,
+               ProductId = p.ProductId,
+               ProductName=p.ProductName,
+               Message=null
+            }).ToList();
+
+            return products;
+        }
+
         public async Task< GetProductDto> GetProductAsync(string productId)
         {
 

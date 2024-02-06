@@ -12,17 +12,20 @@ namespace DAL.Context
 {
     public class DBContext: IdentityDbContext<User>
     {
-        public DBContext() { }
+        public DBContext() {
+           
+        }
         public DBContext(DbContextOptions options)
        : base(options)
         {
-
+            this.ChangeTracker.LazyLoadingEnabled = false;
         }
         public DbSet<Product> Products { get; set; }    
      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
+            
 
 
         }

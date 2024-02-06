@@ -22,7 +22,7 @@ namespace BLL.Services
             _Product = Product;
         }
 
-        public async Task<GetProductDto> AddProduct(AddProductDto productDto, string SellerUserName)
+        public async Task<GetProductDto> AddProductAsync(AddProductDto productDto, string SellerUserName)
         {
             var user = await  _userManager.FindByNameAsync(SellerUserName);
            
@@ -50,7 +50,7 @@ namespace BLL.Services
             return ProductDetail;
         }
 
-        public async Task<string> DeleteProduct(string ProductId, string SellerUserName)
+        public async Task<string> DeleteProductAsync(string ProductId, string SellerUserName)
         {
             var user = await _userManager.FindByNameAsync(SellerUserName);
 
@@ -66,7 +66,7 @@ namespace BLL.Services
                 return "The Product not found";
             }
             if (product.SellerId != user.Id) {
-                return "You aren't allowed for deleting this product";
+                return "You are not allowed to delete this product";
             }
             await _Product.DeleteAsync(product);
             return "Product Deleted successfully ";
@@ -90,7 +90,7 @@ namespace BLL.Services
             return products;
         }
         
-        public async Task< GetProductDto> GetProduct(string productId)
+        public async Task< GetProductDto> GetProductAsync(string productId)
         {
 
             var product = await _Product.GetByIdAsync(productId);
@@ -108,7 +108,7 @@ namespace BLL.Services
             };
         }
 
-        public async Task<GetProductDto> UpdateProduct(UpdateProductDto productDto, string SellerUserName)
+        public async Task<GetProductDto> UpdateProductAsync(UpdateProductDto productDto, string SellerUserName)
         {
             var user = await _userManager.FindByNameAsync(SellerUserName);
 
@@ -124,7 +124,7 @@ namespace BLL.Services
             }
             if (product.SellerId != user.Id)
             {
-                return new GetProductDto {Message = "You aren't allowed for deleting this product"};
+                return new GetProductDto {Message = "You aren't allowed for updating this product"};
             }
             product.ProductName= productDto.ProductName??product.ProductName;
             product.AmountAvailable=productDto.AmountAvailable??product.AmountAvailable;

@@ -9,8 +9,7 @@ namespace BLL.DTOs
 {
    public class PurchasedProductDto
     {
-        [Required]
-        public string Username { get; set; }
+        
         [Required]
         public string ProductId {  get; set; }
         [Required]

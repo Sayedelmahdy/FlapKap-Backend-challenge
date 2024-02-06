@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs
 {
-    public class ChangeResultDto
+    public class CoinResultDto
     {
         public string Message { get; set; }
         public int Coins100 { get; set; }

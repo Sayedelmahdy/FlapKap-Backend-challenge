@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.DTOs
+namespace UnitTestCase.Test.TestController
 {
-    public class DepositDto
+    public class VendingMachineControllerTest
     {
-        public string UserName { get; set; }
-        public int coin {  get; set; }
     }
 }

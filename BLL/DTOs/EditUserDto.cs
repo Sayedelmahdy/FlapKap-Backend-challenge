@@ -10,8 +10,7 @@ namespace BLL.DTOs
     public class EditUserDto
     {
  
-        [ StringLength(50)]
-        public string? Username { get; set; }
+        
 
         [ StringLength(128)]
         public string? Email { get; set; }

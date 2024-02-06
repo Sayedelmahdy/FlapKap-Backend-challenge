@@ -14,6 +14,6 @@ namespace BLL.DTOs
         public string ProductId { get; set; }
        
         public int AmountOfProduct { get; set; }
-        public ChangeResultDto Change { get; set; }
+        public CoinResultDto Change { get; set; }
     }
 }

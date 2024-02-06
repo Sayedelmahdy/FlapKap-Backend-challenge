@@ -11,7 +11,6 @@ namespace BLL.Interfaces
     {
         Task<UserDetailDto> RegisterAsync(RegisterDto model);
         Task<AuthenticationDetailDto> GetTokenAsync(TokenRequestDto model);
-        Task<string> AddRoleAsync(AddRoleDto model);
         Task<AuthenticationDetailDto> RefreshTokenAsync(string Token);
         Task<bool> RevokeTokenAsync(string Token);
     }

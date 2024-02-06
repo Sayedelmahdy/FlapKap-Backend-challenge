@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    internal class UserService : IUserService
+    public class UserService : IUserService
     {
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -38,7 +38,7 @@ namespace BLL.Services
             if (user is null)
                 return new UserDetailDto { Message = "Username is Not Found" };
 
-
+            
 
             if (model.Role.Count() > 0)
             {
@@ -60,10 +60,7 @@ namespace BLL.Services
                 await _userManager.RemovePasswordAsync(user);
                 await _userManager.AddPasswordAsync(user, model.Password);
             }
-            if (model.Username != null)
-            {
-                user.UserName = model.Username;
-            }
+            
            
             await _userManager.UpdateAsync(user);
 
@@ -75,9 +72,12 @@ namespace BLL.Services
                 UserName = user.UserName,
                 Email = user.Email,
                 Role = await _userManager.GetRolesAsync(user),
-                PhoneNumber = user.PhoneNumber
+                PhoneNumber = user.PhoneNumber,
+                Deposit=user.Deposit,
+
             };
         }
+
 
         public async Task<bool> DeleteUserAsync(string Username)
         {
@@ -88,6 +88,25 @@ namespace BLL.Services
             }
            await _userManager.DeleteAsync(user);
             return true;
+        }
+
+        public async Task<UserDetailDto> GetUser(string username)
+        {
+            var user = await _userManager.FindByNameAsync(username);
+            if (user == null)
+            {
+                return new UserDetailDto { Message = "User nout found" };
+            }
+            return new UserDetailDto
+            {
+                Message="That's your details",
+                Email=user.Email,
+                Deposit = user.Deposit,
+                PhoneNumber = user.PhoneNumber,
+                UserName=user.UserName,
+                Role = await _userManager.GetRolesAsync(user),
+
+            };
         }
     }
 }

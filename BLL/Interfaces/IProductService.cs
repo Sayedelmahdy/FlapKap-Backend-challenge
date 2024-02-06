@@ -9,11 +9,11 @@ namespace BLL.Interfaces
 {
     public interface IProductService
     {
-        Task<GetProductDto> AddProduct(AddProductDto productDto,string SellerUserName);
-        Task<string> DeleteProduct(string ProductId , string SellerUserName);
-        Task<GetProductDto> UpdateProduct(UpdateProductDto productDto,string SellerUserName);
+        Task<GetProductDto> AddProductAsync(AddProductDto productDto,string SellerUserName);
+        Task<string> DeleteProductAsync(string ProductId , string SellerUserName);
+        Task<GetProductDto> UpdateProductAsync(UpdateProductDto productDto,string SellerUserName);
         IEnumerable< GetProductDto>? GetAllProduct();
-        Task <GetProductDto> GetProduct(string ProductId);
+        Task <GetProductDto> GetProductAsync(string ProductId);
 
     }
 }

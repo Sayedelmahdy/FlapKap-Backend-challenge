@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BLL.Interfaces
 {
-    internal interface IUserService
+   public interface IUserService
     {
-       
+        Task<UserDetailDto>  GetUser(string username);
         Task<UserDetailDto> UpdateUserAsync(string Username, EditUserDto model);
         Task<bool> DeleteUserAsync(string Username);
 
